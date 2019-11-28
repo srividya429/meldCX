@@ -10,6 +10,7 @@ import android.util.Log
 /**
  * Created by Lakshmi Srividya on 11/26/2019.
  */
+
 class DatabaseHelper(context: Context) :
     SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 

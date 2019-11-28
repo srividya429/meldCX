@@ -4,6 +4,10 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import java.io.ByteArrayOutputStream
 
+/**
+ * Created by Lakshmi Srividya on 11/09/2019.
+ */
+
 object Utils {
     fun getBytes(bitmap: Bitmap): ByteArray {
         val stream = ByteArrayOutputStream()

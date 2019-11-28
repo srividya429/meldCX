@@ -1,11 +1,14 @@
 package com.meldcx.captureweb
 
 import android.os.Bundle
-import android.util.Log
 import android.widget.ListView
 import android.widget.SearchView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+
+/**
+ * Created by Lakshmi Srividya on 11/26/2019.
+ */
 
 class HistoryActivity : AppCompatActivity() {
 

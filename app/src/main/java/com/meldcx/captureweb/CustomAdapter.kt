@@ -14,6 +14,9 @@ import android.widget.Toast
 import java.util.*
 import kotlin.collections.ArrayList
 
+/**
+ * Created by Lakshmi Srividya on 11/26/2019.
+ */
 
 class CustomAdapter(private val context: Context,
                     private val dataList: ArrayList<HashMap<String, String>>) : BaseAdapter() {
