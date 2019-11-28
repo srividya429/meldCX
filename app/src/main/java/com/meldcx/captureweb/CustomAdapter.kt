@@ -59,7 +59,6 @@ class CustomAdapter(private val context: Context,
         holder.mUrl!!.setText(map.get("url"))
         holder.mUrl!!.setMovementMethod(LinkMovementMethod.getInstance())
         holder.mUrl!!.setOnClickListener {
-            Toast.makeText(context,holder.mUrl!!.text,Toast.LENGTH_SHORT).show()
             val intent: Intent = Intent(context.getApplicationContext(),WebActivity::class.java).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             intent.putExtra("URL", holder.mUrl!!.text)
             context.getApplicationContext().startActivity(intent)
