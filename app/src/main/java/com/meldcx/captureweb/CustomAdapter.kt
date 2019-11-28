@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
+import android.system.Os.remove
 import android.text.method.LinkMovementMethod
 import android.view.View
 import android.view.ViewGroup
@@ -36,6 +37,7 @@ class CustomAdapter(private val context: Context,
             holder.mImage = view!!.findViewById<ImageView>(R.id.imageview) as ImageView
             holder.mUrl = view!!.findViewById<TextView>(R.id.header) as TextView
             holder.mDate = view!!.findViewById<TextView>(R.id.subHeader) as TextView
+            holder.mDelete= view!!.findViewById<ImageView>(R.id.delete) as ImageView
             view.setTag(holder)
         } else {
             holder = view!!.getTag() as ViewHolder
@@ -62,8 +64,13 @@ class CustomAdapter(private val context: Context,
             val intent: Intent = Intent(context.getApplicationContext(),WebActivity::class.java).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             intent.putExtra("URL", holder.mUrl!!.text)
             context.getApplicationContext().startActivity(intent)
+
         }
         holder.mDate!!.setText(map.get("date"))
+        holder.mDelete!!.setOnClickListener {
+            dataList.remove(getItem(position))
+            notifyDataSetChanged()
+        }
         return view
     }
 
@@ -84,6 +91,7 @@ class CustomAdapter(private val context: Context,
         var mImage: ImageView? = null
         var mUrl: TextView? = null
         var mDate: TextView? = null
+        var mDelete: ImageView?=null
     }
 
     //Filter the list according to the search keyword entered

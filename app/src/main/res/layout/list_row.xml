@@ -10,18 +10,18 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:scaleType="fitCenter"
-        android:src="@drawable/icon_capture"/>
+        android:src="@drawable/icon_capture" />
 
     <TextView
 
-        android:autoLink="all"
         android:id="@+id/header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:layout_toRightOf="@+id/imageview"
-        android:text="Text1"
+        android:autoLink="all"
         android:linksClickable="true"
+        android:text="Text1"
         android:textColor="@android:color/black"
         android:textSize="20dp"
         android:textStyle="normal" />
@@ -37,5 +37,14 @@
         android:textColor="@android:color/black"
         android:textSize="20dp"
         android:textStyle="normal" />
+
+    <ImageView
+        android:layout_toRightOf="@+id/subHeader"
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@+id/subHeader"
+        android:src="@drawable/delete" />
 
 </RelativeLayout>
