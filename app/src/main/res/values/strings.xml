@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MeldCX</string>
+    <string name="go">GO</string>
+    <string name="capture">CAPTURE</string>
+    <string name="history">HISTORY</string>
+    <string name="enter_valid_url">Please Enter valid URL</string>
+    <string name="enterURL">Enter URL here</string>
+</resources>
