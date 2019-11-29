@@ -19,10 +19,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:layout_toRightOf="@+id/imageview"
-        android:autoLink="all"
         android:linksClickable="true"
         android:text="Text1"
-        android:textColor="@android:color/black"
+        android:textColor="@color/colorAccent"
         android:textSize="20dp"
         android:textStyle="normal" />
 
