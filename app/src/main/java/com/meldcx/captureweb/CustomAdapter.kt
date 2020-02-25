@@ -4,16 +4,17 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
-import android.system.Os.remove
+import android.graphics.BitmapFactory
 import android.text.method.LinkMovementMethod
+import android.util.Base64
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import java.util.*
 import kotlin.collections.ArrayList
+
 
 /**
  * Created by Lakshmi Srividya on 11/26/2019.
@@ -58,13 +59,15 @@ class CustomAdapter(private val context: Context,
 
         //Setting name to TextView it's Key from HashMap At Position
 
+        /*val decodedString: ByteArray = android.util.Base64.decode(map.get("bitmap"), Base64.URL_SAFE)
+        val decodedByte =
+            BitmapFactory.decodeByteArray(decodedString, 0, decodedString.size)
+        holder.mImage!!.setImageBitmap(map.get("bitmap"))*/
         holder.mUrl!!.setText(map.get("url"))
-        holder.mUrl!!.setMovementMethod(LinkMovementMethod.getInstance())
         holder.mUrl!!.setOnClickListener {
-            val intent: Intent = Intent(context.getApplicationContext(),WebActivity::class.java).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            val intent: Intent = Intent(context.getApplicationContext(),WebActivity::class.java)
             intent.putExtra("URL", holder.mUrl!!.text)
             context.getApplicationContext().startActivity(intent)
-
         }
         holder.mDate!!.setText(map.get("date"))
         holder.mDelete!!.setOnClickListener {
