@@ -23,6 +23,7 @@ class SplashActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
+
         setContentView(R.layout.activity_splash)
         Timer().schedule(3000) {
             val webIntent = Intent(applicationContext, WebActivity::class.java)
