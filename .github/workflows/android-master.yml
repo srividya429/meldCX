@@ -33,10 +33,11 @@ jobs:
       - name: Build Project
         run: ./gradlew assemble
 
-  test:
-    name: Run Unit Tests
-   # runs-on: ubuntu-18.04
+  unit-tests:
+    name: Unit tests
     runs-on: ubuntu-latest
+    env:
+      JAVA_TOOL_OPTIONS: -Xmx4g -XX:+UseParallelGC
 
     steps:
       - uses: actions/checkout@v1
