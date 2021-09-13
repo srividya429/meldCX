@@ -25,6 +25,7 @@ class SplashActivity : AppCompatActivity() {
         )
 
         setContentView(R.layout.activity_splash)
+
         Timer().schedule(3000) {
             val webIntent = Intent(applicationContext, WebActivity::class.java)
             startActivity(webIntent)
