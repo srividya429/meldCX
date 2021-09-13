@@ -1,12 +1,15 @@
 name: android-master
 
 on:
-  pull_request:
-    branches:
-      - 'master'
   push:
-    branches:
-      - 'master'
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+env:
+  CI: true
+  GRADLE_OPTS: -Dkotlin.incremental=false -Dorg.gradle.jvmargs="-Xmx4g -XX:+HeapDumpOnOutOfMemoryError"
+  TERM: dumb
 
 jobs:
   build:
